@@ -1,0 +1,195 @@
+let accountBalance = "5000";
+ 
+        pin = +"2222";
+        let atmPin = +prompt("Enter your card pin: ");
+
+        //Proceeds when pin is correct
+        if (pin == atmPin)
+        {
+            switch(atmPin)
+        {
+            case atmPin = +"2222":
+                
+            let welcomeMessage = Number(prompt(`
+                    Welcome to Access bank
+
+                1. Check Balance             2. Transfer
+                3. Airtime                        4. Data purchase
+                5. Activate atm card        6. Pay Utility bill
+                        `));
+
+                switch(true)
+                {
+                    case welcomeMessage == 1:
+                    alert(`your account balance is ${accountBalance}`);
+                    break;
+                }
+
+
+
+                //tranfer
+                switch(true)
+                {
+                    case welcomeMessage == 2:
+                    let tranfer = prompt(`Select an option
+                                            1. own bank
+                                            2. other banks
+                                       `);
+
+                    switch(true)
+                    {
+                        //performs transaction for own bank
+                        case tranfer == 1:
+                        {
+                            let account = +prompt("Enter recipient account number")
+                            let  amount =  +prompt("Enter amount");
+                            atmPin =  +prompt("Enter your four digit pin: ");
+                            let confirmation = confirm(`you are about to transfer ${amount} to Israel Oyetunji`);
+                            let success =  alert(`transfer of ${amount} successful!`)
+                            let balance = accountBalance - amount;
+                            alert(`your new balance is ${balance}`);
+                            break;
+                        }
+                    
+                        //performs transaction for other banks
+                        case tranfer == 2:
+                        {
+                            let others = +prompt("Enter the recipient's account number");
+                            let bank = prompt("Enter recipient bank");
+                            amount = prompt("Enter amount");
+                            confirmation = confirm(`your are about to tranfer ${amount} to Blessing Tijani`);
+                            success = alert(`transfer of ${amount} to Blessing Tijani successful!`);
+                            balance = accountBalance - amount;
+                            alert(`your new balance is ${balance}`);
+                            break;
+                        }
+                        
+                        default:
+                        {
+                            alert("Please enter a valid number");
+                            break;
+                        }
+                    }
+
+                }
+            
+                //airtime
+                switch(true)
+                {
+                    case welcomeMessage == 3: 
+                    let airtime = Number(prompt(`Select an option
+                                                    1. Self
+                                                    2. Others
+                                                `));
+
+                    switch(true)
+                    {
+                        //performs airtime for Self
+                        case airtime == 1: 
+                        {
+                            let amount = +(prompt('Enter Amount'))
+                            let atmPin = +prompt("Enter your four digit pin");
+                            success = alert(`You have recieved an airtime of ${amount}`);
+                            balance = accountBalance - amount;
+                            alert(`your new balance is ${balance}`);      
+                            break;                                     
+                        }
+                    
+
+                        //performs airtime for Others
+                        case airtime == 2: 
+                        {
+                            let amount = +(prompt('Enter Amount'))
+                            let othersNumber = +(prompt('Enter Recipient Phone Number'))
+                            atmPin = +prompt("Enter your four digit pin");
+                            confirmation = confirm(`You are sending an airtime of ${amount} to ${othersNumber}`)
+                            success =  alert(`Airtime of ${amount} Sent to ${othersNumber}`)
+                            balance = accountBalance - amount;
+                            alert(`your new balance is ${balance}`);
+                            break;
+                        }
+                        
+                        default: 
+                        {
+                            alert('Please enter a valid number')
+                            break;
+                        }
+                
+                    }
+                
+                }
+
+                //Data purchase
+                while(welcomeMessage == 4)
+                {
+                    let Data = Number(prompt(`Select an option
+                                                    1. Self
+                                                    2. Third party
+                                                `));
+
+                    //performs Data purchase for Self
+                    if(Data == 1)
+                    {
+                        let correctPin = +"2222";
+                        let self = Number(prompt(`choose your preferred package:
+                                      1. 1Gb #500 (7 days)
+                                      2. 2.5Gb #500 (2days)
+                                      3. 3GB #1500 (1month)
+                                      4. 9GB #3500 (1 month)
+                                      5. 20GB #5000 (1 month)`));
+
+                        let atmPin = +prompt("Enter your four digit pin");
+                        
+                        if (correctPin == atmPin)
+                        {
+                            alert(`Data purchase successful`);
+                        }
+                        else
+                        {
+                            alert("incorrect pin");
+                        }
+                    }
+
+                    //performs Data purchase for Third party
+                    else if(Data == 2)
+                    {
+                        let correctPin = +"2222";
+                        let self = Number(prompt(`choose your preferred package:
+                                      1. 1Gb #500 (7 days)
+                                      2. 2.5Gb #500 (2days)
+                                      3. 3GB #1500 (1month)
+                                      4. 9GB #3500 (1 month)
+                                      5. 20GB #5000 (1 month)`));
+
+                        let phoneNumber = Number(prompt('Enter destination phone number: '));
+                        let atmPin = +prompt("Enter your four digit pin");
+                        
+                        if (correctPin == atmPin)
+                        {
+                            alert(`Data purchase for ${phoneNumber} successful!`);
+                        }
+                        else
+                        {
+                            alert("incorrect pin");
+                        }
+                    }
+
+                    else
+                    {
+                        alert('Please enter a valid number');
+                    }
+
+                    exit();
+        
+                }
+
+            }
+
+        }
+        
+        //Returns invalid when pin is incorrect
+        else
+        {
+            alert('Incorrect pin');
+            exit();
+        }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #ff0000;
+        }
+
+        .person-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            animation: fade-in 1s ease-in-out;
+        }
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Meet Our Team</title>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="py-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-semibold text-white text-center">Meet Our Team</h1>
+        </div>
+    </header>
+
+    <!-- Team Members Section -->
+    <section class="container mx-auto py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Team Member 1 -->
+            <div class="person-card bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="Members/headshot.jpg" alt="Team Member 1" class="w-full h-64 object-cover object-center rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold mb-2">Onyeyili Febechukwu Owen</h2>
+                    <p class="text-gray-600">Position: Presenter</p>
+                    <p class="text-gray-600">Team: Innovation Squad.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="person-card bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="Members/na.jpg" alt="Team Member 2" class="w-full h-64 object-cover object-center rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold mb-2">Nofisat Abiodun Ayanlola</h2>
+                    <p class="text-gray-600">Position: Anchor</p>
+                    <p class="text-gray-600">Team: Innodev.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="person-card bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="Members/chan.jpg" alt="Team Member 3" class="w-full h-64 object-cover object-center rounded-t-lg">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold mb-2">Victoria Iria</h2>
+                    <p class="text-gray-600">Position: Questionnaire</p>
+                    <p class="text-gray-600">Team: Euvola.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

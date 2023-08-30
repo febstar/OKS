@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <!-- Include Slick Slider CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        /* Custom Styles */
+        .navbar {
+            background-color: #ff0000; /* CNN red */
+        }
+        .navbar a {
+            color: #fff;
+        }
+        .hero-heading {
+            font-size: 3rem;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .presentation {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+        .slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+        }
+        .slide:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .slide:nth-child(odd) {
+            background-color: #fff;
+        }
+        .content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+    </style>
+    <title>OKS GROUP 4</title>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="navbar py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-white">OKS SITE</a>
+            <ul class="flex space-x-6">
+                <li><a href="MeetTeam.html" class="text-white">Meet The Team</a></li>
+                <li><a href="HOH.html" class="text-white">HOH Section</a></li>
+                <li><a href="LiveDemo.html" class="text-white">Live Demos</a></li>
+                <li><a href="Highlights.html" class="text-white">Highlights</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="presentation">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="content">
+                <h1 class="text-4xl font-semibold">Welcome to Our OKS Live Presentation</h1>
+                <p class="text-lg mt-4">Sit back as we take you through JavaScript so far.</p><br><br>
+                <img src="Members/correctgroup.png" alt="">
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-3xl font-semibold">Table of contents</h2>
+                <p class="text-lg mt-2">Here, we introduce the content of our presentation.</p><br><br>
+                <ol class=" text-sm mt-3 text-left">
+                    <li><a href="#Data">Data Types</a></li><br>
+                    <li><a href="#Con">Conditional Statements</a></li><br>
+                    <li><a href="#Loop">Loops</a></li><br>
+                    <li><a href="#Fun">Functions</a></li><br>
+                    <li><a href="#DOM">DOM (Document Object Model)</a></li><br>
+                    <li><a href="#Array">Array Methods</a></li><br>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="Data">
+            <div class="content">
+                <h2 class="text-3xl font-semibold">Data Types in JavaScript</h2>
+                <img src="OKS/Screenshot 2023-08-29 220446.png" alt="">
+            </div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-3xl font-semibold">Data Types in JavaScript</h2>
+                <p class="text-lg mt-4">Examples</p>
+                <img src="OKS/Screenshot 2023-08-29 225634.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-3xl font-semibold">User Interaction</h2>
+                <p class="text-lg mt-4">->Prompt, Alert and Confirm</p>
+                <img src="OKS/WhatsApp Image 2023-08-29 at 23.09.07.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="slide" id="Con">
+            <div class="content">
+                <h2 class="text-3xl font-semibold">Conditional Statements in JavaScript</h2>
+                <p class="text-lg mt-4">A conditional statement is a programming construct that allows you to execute different code depending on the value of a condition. In JavaScript, there are three types of conditional statements:</p>
+                <img src="OKS/Screenshot 2023-08-29 220600.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Conditional Statements in JavaScript</h2>
+                <img src="OKS/Screenshot 2023-08-29 231739.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide" id="Loop">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Loops in JavaScript</h2>
+                <p class="text-lg mt-4">A loop is a programming construct that allows you to execute a block of code repeatedly until a certain condition is met. In JavaScript, there are four types of loops:</p><br><br>
+                <ul class="text-sm mt-3 text-left">
+                    <li>For loop: The for loop is the most basic type of loop. It executes a block of code a specified number of times.</li><br>
+                    <li>While loop: The while loop executes a block of code while a certain condition is true.</li><br>
+                    <li>Do while loop: The do while loop executes a block of code once, and then repeats the block of code while a certain condition is true.</li><br>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">For Loop</h2>
+                <img src="OKS/l3.PNG" alt="" class="w-full h-75">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">While Loop</h2>
+                <img src="OKS/l1.PNG" alt="" class="w-full h-75">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Do While Loop</h2>
+                <img src="OKS/l2.PNG" alt="" class="w-full h-75">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Differences</h2>
+                <img src="OKS/l4.PNG" alt="" class="w-full h-75">
+            </div>
+        </div>
+
+        <div class="slide" id="Fun">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Functions in JavaScript</h2>
+                <p class="text-lg mt-4">A function is a block of code that is executed when it is called. Functions can be used to perform a specific task, or to group related code together.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Functions Parameters</h2>
+                <img src="OKS/Screenshot (683).png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Functions Definition</h2>
+                <img src="OKS/Screenshot 2023-08-30 044440.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide" id="DOM">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">DOM (Document Object Model)</h2>
+                <img src="OKS/Screenshot 2023-08-30 045226.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">DOM Methods</h2>
+                <img src="OKS/Screenshot 2023-08-30 045817.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Event Listeners</h2>
+                <img src="OKS/event.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Event Listeners</h2>
+                <p class="text-lg mt-4">Examples</p>
+                <img src="OKS/Screenshot 2023-08-30 050320.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Event Handlers</h2>
+                <img src="OKS/Screenshot 2023-08-30 050505.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide" id="Array">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Array Methods</h2>
+                <img src="OKS/Screenshot 2023-08-30 051202.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Array Methods</h2>
+                <img src="OKS/Screenshot 2023-08-30 051345.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Array Methods</h2>
+                <img src="OKS/array1.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Array Methods</h2>
+                <img src="OKS/array2.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h2 class="text-4xl font-semibold">Array Methods</h2>
+                <img src="OKS/array3.png" alt="">
+            </div>
+        </div>
+
+
+
+
+        <!-- Final Slide -->
+        <div class="slide">
+            <div class="content">
+                <h1 class="text-4xl font-semibold">Thank You for Attending!</h1>
+                <p class="text-lg mt-4">Feel free to ask questions or contact us for more information.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; TIIDELAB COHORT 5. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize the Slick Slider -->
+    <script>
+        // JavaScript for smooth scrolling effect (optional)
+        const slides = document.querySelectorAll(".slide");
+        let scrollTimeout;
+
+        window.addEventListener("scroll", () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollX = window.scrollX;
+                const index = Math.round(scrollX / window.innerWidth);
+                slides[index].scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        });
+
+        $(document).ready(function(){
+            $('.slick-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            dots: false,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

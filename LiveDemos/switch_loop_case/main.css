@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: url("Access-Bank2.webp") no-repeat  center/cover;
+    height: 100vh;
+    
+}
+.heading{
+    padding: 30px;
+    color: rgb(190, 190, 217);
+}  
+
+.para{
+    color: white;
+    background:rgb(10, 90, 116);
+    border: 1px solid black;
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 35%;
+    padding: 20px;
+
+}
+.card{
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+
+}

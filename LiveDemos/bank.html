@@ -1,0 +1,146 @@
+<script>
+    let money = 1000;
+    let name = prompt('Dear User, Please Key in your name to use this ATM ');
+    let start = +prompt(`Welcome ${name}, \n Please select a transaction.\n 1. Cash Withdrawals                    2. Balance Inquiry\n 3. Cash Deposits                          4. Fund Transfer\n 5. PIN Change                             6. Bill Payment\n 7. Mobile Phone Top-Ups           8. Receipts\n `)
+    let pin = +prompt('Please Key in your pin')
+    if (start == 1) {
+        let globalDebit = 1
+        let withdrawal = +prompt('How much do you want to withdraw? \n1. $10      2. $50\n 3. $500      4. $1,000\n 5. $2,000     6. $5,000')
+        if (withdrawal == 1) {
+            globalDebit = 10
+        }
+        if (withdrawal == 2) {
+            globalDebit = 50
+        }
+        if (withdrawal == 3) {
+            globalDebit = 500
+        }
+        if (withdrawal == 4) {
+            globalDebit = 1000
+        }
+        if (withdrawal == 5) {
+            globalDebit = 2000
+        }
+        if (withdrawal == 6) {
+            globalDebit = 5000
+        }
+        if (money < globalDebit) {
+            alert('Insufficent Funds!!! \nPlease take your card')
+        }
+        else {
+            let finalAmount = money - globalDebit
+            alert(`Successful!!! \nBalance: $${finalAmount}`)
+            alert(`Thank You for banking with us ${name}`)
+        }
+    }
+    if (start == 2) {
+        alert(`Your Current Checking Balance\nSavings Account: $${money}`)
+    }
+    if (start == 3) {
+        let deposit = +prompt("How much do you want to deposit?")
+        let newbalance = money + deposit
+        alert(`Successful!!!\nNew Balance: $${newbalance}`)
+    }
+    if (start == 4) {
+        let trsAccount = prompt('Please key in the account number here ')
+        let trsBank = prompt('Please provide bank name')
+        let amount = +prompt('How much would you be send?')
+        if (amount > money) {
+            alert('Insufficent Funds!!!')
+        }
+        else {
+            let con = confirm(`Transfer $${amount} to ${trsAccount} from ${trsBank}?`)
+            if (con == true) {
+                alert(`Successful!!!\nNew Balance: $${money-amount}`)
+            }
+            else {
+                alert('Cancelled!!!')
+            }
+        }
+
+    }
+    if (start == 5) {
+        let oldPin = +prompt('Please what is your old pin?')
+        if (oldPin != pin) {
+            alert('Wrong Pin!!!')
+        }
+        else {
+            let newPin = +prompt('Please what is your new pin?')
+            if (newPin == pin) {
+                alert('You can not put the same pin here!!!')
+            }
+            else {
+                pin = newPin
+                alert('Successful!!!')
+            }
+        }
+    }
+    if (start == 6) {
+        let sub = +prompt('Please select a bill you would be paying for.\n1. DSTV      2. GOTV\n3. NEPA Bill     4. Water Bill')
+        let remove = 0
+        if (sub == 1) {
+            remove = 25
+            if (remove > money) {
+                alert('Insufficent Funds!!!')
+            }
+            else {
+                money = money - remove
+                alert(`Successful!!\nNew Balance: $${money}`)
+            }
+
+        }
+        if (sub == 2) {
+            remove = 15
+            if (remove > money) {
+                alert('Insufficent Funds!!!')
+            }
+            else {
+                money = money - remove
+                alert(`Successful!!\nNew Balance: $${money}`)
+            }
+
+        }
+        if (sub == 3) {
+            remove = 250
+            if (remove > money) {
+                alert('Insufficent Funds!!!')
+            }
+            else {
+                money = money - remove
+                alert(`Successful!!\nNew Balance: $${money}`)
+            }
+
+        }
+        if (sub == 4) {
+            remove = 150
+            if (remove > money) {
+                alert('Insufficent Funds!!!')
+            }
+            else {
+                money = money - remove
+                alert(`Successful!!\nNew Balance: $${money}`)
+            }
+
+        }
+    }
+    if (start == 7) {
+        let phoneNum = prompt('Please provide phone number')
+        let network = prompt('Please provide network provider')
+        let credit = +prompt('How much would you be send?')
+        if (credit > money) {
+            alert('Insufficent Funds!!!')
+        }
+        else {
+            let con = confirm(`Buy Airtime of $${credit} to ${phoneNum} of ${network}?`)
+            if (con == true) {
+                alert(`Successful!!!\nNew Balance: $${money-credit}`)
+            }
+            else {
+                alert('Cancelled!!!')
+            }
+        }
+    }
+    if (start == 8) {
+        alert('Receipts unavaiable!!!')
+    }
+</script>
