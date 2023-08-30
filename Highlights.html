@@ -21,9 +21,11 @@
             transition: transform 1s ease-in-out;
         }
         .slider img {
-            width: 100vw;
-            min-width: 100%;
+            width: 50vw;
+            min-width: 50%;
             height: 50vh;
+            padding: 10px;
+            margin: 10px;
         }
     </style>
     <title>Slideshow</title>
@@ -37,7 +39,7 @@
 
     <!-- Slider Container -->
     <div class="slider-container">
-        <div class="slider">
+        <div class="slider ">
             <!-- Add your images here -->
             <img src="Highlights/1.jpg" alt="">
             <img src="Highlights/2.jpg" alt="">
@@ -77,7 +79,7 @@
         let currentImageIndex = 0;
 
         function nextSlide() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
+            currentImageIndex = (currentImageIndex + 1) % 8;
             const translateX = -currentImageIndex * 100;
             slider.style.transform = `translateX(${translateX}%)`;
         }
