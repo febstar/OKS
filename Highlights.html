@@ -38,7 +38,7 @@
 <body>
     <nav class="navbar py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold text-white">OKS SITE</a>
+            <a href="index.html" class="text-3xl font-bold text-white">Online Knowledge Sharing</a>
         </div>
     </nav>
 
@@ -84,9 +84,16 @@
         let currentImageIndex = 0;
 
         function nextSlide() {
-            currentImageIndex = (currentImageIndex + 1) % 8;
-            const translateX = -currentImageIndex * 100;
-            slider.style.transform = `translateX(${translateX}%)`;
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                currentImageIndex = (currentImageIndex + 1) % 17;
+                const translateX = -currentImageIndex * 100;
+                slider.style.transform = `translateX(${translateX}%)`;
+            } else {
+                currentImageIndex = (currentImageIndex + 1) % 8;
+                const translateX = -currentImageIndex * 100;
+                slider.style.transform = `translateX(${translateX}%)`;
+            }
+            
         }
 
         setInterval(nextSlide, slideDuration);
